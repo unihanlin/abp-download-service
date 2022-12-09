@@ -1,0 +1,7 @@
+{
+  "culture": "sl",
+  "texts": {
+    "SamplePageMessage": "Vzorčna stran za modul AbpDownloadService",
+    "Menu:AbpDownloadService": "Ime mojega projekta"
+  }
+}

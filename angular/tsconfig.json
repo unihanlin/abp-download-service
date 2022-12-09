@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "paths": {
+      "@unihanlin/abp-download-service": ["projects/abp-download-service/src/public-api.ts"],
+      "@proxy": ["projects/abp-download-service/src/lib/proxy/index.ts"],
+      "@proxy/*": ["projects/abp-download-service/src/lib/proxy/*"]
+    }
+  }
+}

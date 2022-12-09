@@ -1,0 +1,7 @@
+{
+  "culture": "hi",
+  "texts": {
+    "SamplePageMessage": "AbpDownloadService मॉड्यूल के लिए एक नमूना पृष्ठ",
+    "Menu:AbpDownloadService": "AbpDownloadService"
+  }
+}
