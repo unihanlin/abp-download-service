@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp;
+using Volo.Abp.Content;
 
 namespace Unihanlin.AbpDownloadService.Samples;
 
@@ -29,5 +30,19 @@ public class SampleController : AbpDownloadServiceController, ISampleAppService
     public async Task<SampleDto> GetAuthorizedAsync()
     {
         return await _sampleAppService.GetAsync();
+    }
+
+    [HttpGet]
+    [Route("download")]
+    public Task<IRemoteStreamContent> DownloadAsync(string name)
+    {
+        return _sampleAppService.DownloadAsync(name);
+    }
+
+    [HttpPost]
+    [Route("transfer")]
+    public Task<IRemoteStreamContent> TransferAsync(UploadDto input)
+    {
+        return _sampleAppService.TransferAsync(input);
     }
 }

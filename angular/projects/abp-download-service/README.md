@@ -1,24 +1,34 @@
 # AbpDownloadService
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
+An download service base on ABP for angular.
 
-## Code scaffolding
+## Install
 
-Run `ng generate component component-name --project abp-download-service` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project abp-download-service`.
-> Note: Don't forget to add `--project abp-download-service` or else it will be added to the default project in your `angular.json` file. 
+```
+npm install @unihanlin/abp-download-service
+```
 
-## Build
+## Usage
 
-Run `ng build abp-download-service` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+import { AbpDownloadService } from '@unihanlin/abp-download-service';
+import { downloadBlob } from '@abp/ng.core';
 
-## Publishing
+constructor(
+    private downloadService: AbpDownloadService
+){
+}
 
-After building your library with `ng build abp-download-service`, go to the dist folder `cd dist/abp-download-service` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test abp-download-service` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+submitForm() {
+    this.downloadService
+      .downloadAsync(
+        {
+          method: 'POST',
+          url: '/api/AbpDownloadService/sample/transfer',
+          fields: this.form,
+        },
+        { apiName: 'AbpDownloadService' }
+      )
+      .subscribe(blobInfo => downloadBlob(blobInfo.blob, blobInfo.fileName));
+  }
+```

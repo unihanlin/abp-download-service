@@ -1,6 +1,22 @@
 {
   "name": "@unihanlin/abp-download-service",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "homepage": "https://www.unihanlin.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unihanlin/abp-download-service.git"
+  },
+  "author": {
+    "name": "linch90;晗林科技",
+    "email": "chuzhilin@unihanlin.com"
+  },
+  "description": "A download service base on ABP for angular.",
+  "keywords": [
+    "download",
+    "ABP",
+    "angular",
+    "ng"
+  ],
   "peerDependencies": {
     "@angular/common": ">=9",
     "@angular/core": ">=9",
@@ -8,6 +24,6 @@
     "@abp/ng.theme.shared": ">=6.0.2"
   },
   "dependencies": {
-    "tslib": "^2.1.0"
+    "tslib": "^2.3.0"
   }
 }

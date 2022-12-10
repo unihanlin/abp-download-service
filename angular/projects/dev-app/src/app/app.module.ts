@@ -5,7 +5,6 @@ import { ThemeSharedModule } from '@abp/ng.theme.shared';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AbpDownloadServiceConfigModule } from '@unihanlin/abp-download-service/config';
 import { CommercialUiConfigModule } from '@volo/abp.commercial.ng.ui/config';
 import { AccountAdminConfigModule } from '@volo/abp.ng.account/admin/config';
 import { AccountPublicConfigModule } from '@volo/abp.ng.account/public/config';
@@ -32,7 +31,6 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
     AccountAdminConfigModule.forRoot(),
     AccountPublicConfigModule.forRoot(),
     IdentityConfigModule.forRoot(),
-    AbpDownloadServiceConfigModule.forRoot(),
     SaasConfigModule.forRoot(),
     SettingManagementConfigModule.forRoot(),
     ThemeLeptonModule.forRoot(),

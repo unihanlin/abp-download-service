@@ -1,0 +1,79 @@
+<div class="card mt-5">
+  <div class="card-body">
+    <div class="mb-3">
+      <label for="fileName" class="form-label">File Name</label>
+      <input id="fileName" type="text" [(ngModel)]="name" class="form-control" />
+    </div>
+    <button class="btn btn-primary" (click)="download()">Download</button>
+  </div>
+</div>
+
+<button class="btn btn-success" (click)="showForm()">Open Modal</button>
+
+<abp-modal [(visible)]="isModalOpen">
+  <ng-template #abpHeader>
+    <h3>Upload and Download</h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <form [formGroup]="form" (ngSubmit)="submitForm()" validateOnSubmit>
+      <div class="mt-2 fade-in-top">
+        <div class="mb-3">
+          <label for="text">
+            {{ 'Text' }}
+          </label>
+
+          <input id="text" type="text" class="form-control" formControlName="text" />
+        </div>
+
+        <div class="mb-3">
+          <label for="timestamp"> {{ 'Timestamp' }} * </label>
+          <input id="timestamp" type="number" class="form-control" formControlName="timestamp" />
+        </div>
+
+        <div class="mb-3">
+          <label for="singleFile"> Single File </label>
+
+          <div class="input-group">
+            <input
+              type="file"
+              id="singleFile"
+              formControlName="singleFile"
+              class="form-control"
+              ngFileInput
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="files"> Files </label>
+
+          <div class="input-group">
+            <input
+              type="file"
+              id="files"
+              formControlName="files"
+              class="form-control"
+              multiple
+              ngFileInput
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" abpClose>
+      {{ 'AbpUi::Cancel' | abpLocalization }}
+    </button>
+
+    <abp-button
+      iconClass="fa fa-check"
+      (click)="submitForm()"
+      [disabled]="form?.invalid || !form?.dirty"
+    >
+      {{ 'AbpUi::Save' | abpLocalization }}
+    </abp-button>
+  </ng-template>
+</abp-modal>

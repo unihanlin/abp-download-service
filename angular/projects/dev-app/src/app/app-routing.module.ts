@@ -25,11 +25,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
-  {
-    path: 'abp-download-service',
-    loadChildren: () =>
-      import('@unihanlin/abp-download-service').then(m => m.AbpDownloadServiceModule.forLazy()),
-  },
 ];
 
 @NgModule({

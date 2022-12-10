@@ -148,6 +148,7 @@ public class AbpDownloadServiceHttpApiHostModule : AbpModule
                             .ToArray()
                     )
                     .WithAbpExposedHeaders()
+                    .WithExposedHeaders("Content-Disposition")
                     .SetIsOriginAllowedToAllowWildcardSubdomains()
                     .AllowAnyHeader()
                     .AllowAnyMethod()

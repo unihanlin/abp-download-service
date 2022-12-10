@@ -22,6 +22,11 @@ public class AbpDownloadServiceHttpApiModule : AbpModule
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+        Configure<AbpAspNetCoreMvcOptions>(options =>
+        {
+            options.ConventionalControllers.FormBodyBindingIgnoredTypes.Add(typeof(UploadDto));
+        });
+
         Configure<AbpLocalizationOptions>(options =>
         {
             options.Resources
