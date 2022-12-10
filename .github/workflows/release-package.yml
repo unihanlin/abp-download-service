@@ -18,7 +18,7 @@ jobs:
           node-version: 16
       - run: npm ci
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-npmjs:
     needs: build
@@ -32,7 +32,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run build
       - name: Publish Package
         working-directory: angular/dist/abp-download-service
