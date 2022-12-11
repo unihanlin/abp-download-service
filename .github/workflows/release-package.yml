@@ -17,10 +17,8 @@ jobs:
         with:
           node-version: 16
       - name: Authenticate with private NPM package
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_READONLY_TOKEN }}" > ~/.npmrc
       - run: npm ci
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_READONLY_TOKEN }}
 
   publish-npmjs:
     needs: build
@@ -33,12 +31,9 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_READONLY_TOKEN }}
       - run: npm run build
       - name: Publish Package
         working-directory: angular/dist/abp-download-service
         run: npm publish
         env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_READONLY_TOKEN }}
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
