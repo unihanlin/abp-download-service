@@ -30,6 +30,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - name: Authenticate with private NPM package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_READONLY_TOKEN }}" > ~/.npmrc
       - run: npm ci
       - run: npm run build
       - name: Publish Package
