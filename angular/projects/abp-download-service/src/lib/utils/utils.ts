@@ -15,6 +15,11 @@ export const fieldsToFormData = (fields?: FormGroup | FormField[]): FormData | n
         } else if (obj instanceof Blob) {
           const blob = obj as Blob;
           formData.append(x[0], blob);
+        } else if (isArray(obj)) {
+          let arr = obj as any[];
+          for (let i = 0; i < arr.length; i++) {
+            formData.append(x[0], arr[i]);
+          }
         } else if (obj) {
           formData.append(x[0], String(obj));
         }
