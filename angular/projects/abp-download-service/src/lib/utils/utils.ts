@@ -24,6 +24,7 @@ export const fieldsToFormData = (fields?: FormGroup | FormField[]): FormData | n
           formData.append(x[0], String(obj));
         }
       });
+
       return formData;
     } else if (isArray(fields)) {
       if (fields?.length > 0) {
@@ -35,6 +36,13 @@ export const fieldsToFormData = (fields?: FormGroup | FormField[]): FormData | n
           } else if (field.content instanceof Blob) {
             const blob = field.content as Blob;
             formData.append(field.fieldName || 'file', blob, field.fileName);
+          } else if (isArray(field.content)) {
+            let arr = field.content as any[];
+            if (arr.length !== 0) {
+              for (let i = 0; i < arr.length; i++) {
+                formData.append(field.fieldName || 'files', arr[i]);
+              }
+            }
           } else if (typeof field.content === 'string' || <any>field.content instanceof String) {
             formData.append(field.fieldName!, String(field.content));
           }

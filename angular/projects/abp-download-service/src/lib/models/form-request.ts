@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 
 export interface FormField {
   fieldName?: string;
-  content: File | Blob | string;
+  content: File | Blob | string | File[] | Blob[];
   fileName?: string;
 }
 
