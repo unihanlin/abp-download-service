@@ -1,6 +1,6 @@
 {
   "name": "@unihanlin/abp-down-load-service",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "homepage": "https://www.unihanlin.com",
   "repository": {
     "type": "git",
@@ -18,13 +18,13 @@
     "ng"
   ],
   "peerDependencies": {
-    "@angular/common": ">=15",
-    "@angular/core": ">=15",
-    "@abp/ng.core": ">=7.1.1",
-    "@abp/ng.theme.shared": ">=7.2.1"
+    "@angular/common": ">=16",
+    "@angular/core": ">=16",
+    "@abp/ng.core": ">=7.4.0",
+    "@abp/ng.theme.shared": ">=7.4.0"
   },
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.1.0"
   },
   "publishConfig": {
     "access": "public"
