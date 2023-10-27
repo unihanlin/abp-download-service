@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { RestService, Rest } from '@abp/ng.core';
 import { HttpRequest, HttpResponse } from '@angular/common/http';
 import { FormRequest } from '../models/form-request';
-import { map } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { BlobInfo } from '../models';
 import { fieldsToFormData } from '../utils/utils';
 

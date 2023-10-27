@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@unihanlin/abp-down-load-service": {
+    "@one-dispatch/abp-down-load-service": {
       "projectType": "library",
       "root": "projects/abp-download-service",
       "sourceRoot": "projects/abp-download-service/src",

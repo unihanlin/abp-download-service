@@ -1,14 +1,8 @@
 {
-  "name": "@unihanlin/abp-down-load-service",
-  "version": "3.0.0",
-  "homepage": "https://www.unihanlin.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unihanlin/abp-download-service.git"
-  },
+  "name": "@one-dispatch/abp-down-load-service",
+  "version": "0.5.0",
   "author": {
-    "name": "linch90;晗林科技",
-    "email": "chuzhilin@unihanlin.com"
+    "name": "linch90"
   },
   "description": "A download service base on ABP for angular.",
   "keywords": [
@@ -18,15 +12,12 @@
     "ng"
   ],
   "peerDependencies": {
-    "@angular/common": ">=16",
-    "@angular/core": ">=16",
-    "@abp/ng.core": ">=7.4.0",
-    "@abp/ng.theme.shared": ">=7.4.0"
+    "@angular/common": ">=12",
+    "@angular/core": ">=12",
+    "@abp/ng.core": ">=5.2.0",
+    "@abp/ng.theme.shared": ">=5.2.0"
   },
   "dependencies": {
     "tslib": "^2.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }

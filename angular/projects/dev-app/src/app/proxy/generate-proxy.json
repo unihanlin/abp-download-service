@@ -1,7 +1,5 @@
 {
-  "generated": [
-    "abpDownloadService"
-  ],
+  "generated": ["abpDownloadService"],
   "modules": {
     "abp": {
       "rootPath": "abp",
@@ -177,15 +175,15 @@
       "rootPath": "abpDownloadService",
       "remoteServiceName": "AbpDownloadService",
       "controllers": {
-        "Unihanlin.AbpDownloadService.Samples.SampleController": {
+        "one-dispatch.AbpDownloadService.Samples.SampleController": {
           "controllerName": "Sample",
           "controllerGroupName": "Sample",
           "isRemoteService": true,
           "apiVersion": null,
-          "type": "Unihanlin.AbpDownloadService.Samples.SampleController",
+          "type": "one-dispatch.AbpDownloadService.Samples.SampleController",
           "interfaces": [
             {
-              "type": "Unihanlin.AbpDownloadService.Samples.ISampleAppService"
+              "type": "one-dispatch.AbpDownloadService.Samples.ISampleAppService"
             }
           ],
           "actions": {
@@ -198,11 +196,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "Unihanlin.AbpDownloadService.Samples.SampleDto",
-                "typeSimple": "Unihanlin.AbpDownloadService.Samples.SampleDto"
+                "type": "one-dispatch.AbpDownloadService.Samples.SampleDto",
+                "typeSimple": "one-dispatch.AbpDownloadService.Samples.SampleDto"
               },
               "allowAnonymous": null,
-              "implementFrom": "Unihanlin.AbpDownloadService.Samples.ISampleAppService"
+              "implementFrom": "one-dispatch.AbpDownloadService.Samples.ISampleAppService"
             },
             "GetAuthorizedAsync": {
               "uniqueName": "GetAuthorizedAsync",
@@ -213,11 +211,11 @@
               "parametersOnMethod": [],
               "parameters": [],
               "returnValue": {
-                "type": "Unihanlin.AbpDownloadService.Samples.SampleDto",
-                "typeSimple": "Unihanlin.AbpDownloadService.Samples.SampleDto"
+                "type": "one-dispatch.AbpDownloadService.Samples.SampleDto",
+                "typeSimple": "one-dispatch.AbpDownloadService.Samples.SampleDto"
               },
               "allowAnonymous": false,
-              "implementFrom": "Unihanlin.AbpDownloadService.Samples.ISampleAppService"
+              "implementFrom": "one-dispatch.AbpDownloadService.Samples.ISampleAppService"
             },
             "DownloadAsyncByName": {
               "uniqueName": "DownloadAsyncByName",
@@ -254,7 +252,7 @@
                 "typeSimple": "Volo.Abp.Content.IRemoteStreamContent"
               },
               "allowAnonymous": null,
-              "implementFrom": "Unihanlin.AbpDownloadService.Samples.ISampleAppService"
+              "implementFrom": "one-dispatch.AbpDownloadService.Samples.ISampleAppService"
             },
             "TransferAsyncByInput": {
               "uniqueName": "TransferAsyncByInput",
@@ -265,9 +263,9 @@
               "parametersOnMethod": [
                 {
                   "name": "input",
-                  "typeAsString": "Unihanlin.AbpDownloadService.UploadDto, Unihanlin.AbpDownloadService.Application.Contracts",
-                  "type": "Unihanlin.AbpDownloadService.UploadDto",
-                  "typeSimple": "Unihanlin.AbpDownloadService.UploadDto",
+                  "typeAsString": "one-dispatch.AbpDownloadService.UploadDto, one-dispatch.AbpDownloadService.Application.Contracts",
+                  "type": "one-dispatch.AbpDownloadService.UploadDto",
+                  "typeSimple": "one-dispatch.AbpDownloadService.UploadDto",
                   "isOptional": false,
                   "defaultValue": null
                 }
@@ -277,8 +275,8 @@
                   "nameOnMethod": "input",
                   "name": "input",
                   "jsonName": null,
-                  "type": "Unihanlin.AbpDownloadService.UploadDto",
-                  "typeSimple": "Unihanlin.AbpDownloadService.UploadDto",
+                  "type": "one-dispatch.AbpDownloadService.UploadDto",
+                  "typeSimple": "one-dispatch.AbpDownloadService.UploadDto",
                   "isOptional": false,
                   "defaultValue": null,
                   "constraintTypes": null,
@@ -291,7 +289,7 @@
                 "typeSimple": "Volo.Abp.Content.IRemoteStreamContent"
               },
               "allowAnonymous": null,
-              "implementFrom": "Unihanlin.AbpDownloadService.Samples.ISampleAppService"
+              "implementFrom": "one-dispatch.AbpDownloadService.Samples.ISampleAppService"
             }
           }
         }
@@ -299,7 +297,7 @@
     }
   },
   "types": {
-    "Unihanlin.AbpDownloadService.Samples.SampleDto": {
+    "one-dispatch.AbpDownloadService.Samples.SampleDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -365,7 +363,7 @@
         }
       ]
     },
-    "Unihanlin.AbpDownloadService.UploadDto": {
+    "one-dispatch.AbpDownloadService.UploadDto": {
       "baseType": null,
       "isEnum": false,
       "enumNames": null,
@@ -993,9 +991,7 @@
       "isEnum": false,
       "enumNames": null,
       "enumValues": null,
-      "genericArguments": [
-        "T"
-      ],
+      "genericArguments": ["T"],
       "properties": [
         {
           "name": "Name",

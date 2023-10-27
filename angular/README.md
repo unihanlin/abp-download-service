@@ -5,13 +5,13 @@ An download service base on ABP for angular.
 ## Install
 
 ```
-npm install @unihanlin/abp-down-load-service
+npm install @one-dispatch/abp-down-load-service
 ```
 
 ## Usage
 
 ```typescript
-import { AbpDownloadService } from '@unihanlin/abp-down-load-service';
+import { AbpDownloadService } from '@one-dispatch/abp-down-load-service';
 import { downloadBlob } from '@abp/ng.core';
 
 constructor(

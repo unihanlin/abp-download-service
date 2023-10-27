@@ -1,7 +1,7 @@
 import { downloadBlob, isNullOrEmpty } from '@abp/ng.core';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AbpDownloadService } from '@unihanlin/abp-down-load-service';
+import { AbpDownloadService } from '@one-dispatch/abp-down-load-service';
 import { finalize } from 'rxjs';
 
 @Component({

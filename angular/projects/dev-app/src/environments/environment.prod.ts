@@ -22,7 +22,7 @@ export const environment = {
   apis: {
     default: {
       url: 'https://localhost:44341',
-      rootNamespace: 'Unihanlin.AbpDownloadService',
+      rootNamespace: 'one-dispatch.AbpDownloadService',
     },
     AbpAccountPublic: {
       url: oAuthConfig.issuer,
@@ -30,7 +30,7 @@ export const environment = {
     },
     AbpDownloadService: {
       url: 'https://localhost:44325',
-      rootNamespace: 'Unihanlin.AbpDownloadService',
+      rootNamespace: 'one-dispatch.AbpDownloadService',
     },
   },
 } as Environment;
